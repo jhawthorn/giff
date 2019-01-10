@@ -33,7 +33,7 @@ module Giff
     end
 
     def metadata_changed?
-      @gem_a.metadata.contents != @gem_b.metadata.contents
+      @gem_a.metadata != @gem_b.metadata
     end
 
     private
