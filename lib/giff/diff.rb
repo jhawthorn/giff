@@ -41,7 +41,7 @@ module Giff
     def to_file(file)
       file = File.open(file) if file.is_a?(String)
 
-      if file.is_a?(File)
+      if file.respond_to?(:read) # probably a file or IO
         Giff::GemFile.new(file)
       else
         raise ArgumentError, "#{file.inspect} isn't a file"
