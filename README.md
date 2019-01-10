@@ -8,23 +8,14 @@ Show the differences between two `.gem` files!
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'giff'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install giff
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ giff pkg/giff-0.1.0.gem pkg/giff-0.1.1.gem
+    README.md was modified
+    lib/giff/diff.rb was modified
+    lib/giff/version.rb was modified
 
 ## Development
 

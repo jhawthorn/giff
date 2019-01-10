@@ -9,8 +9,8 @@ module Giff
 
     def describe
       if files_changed?
-        data_a = @gem_a.data
-        data_b = @gem_b.data
+        data_a = @gem_a.data.contents
+        data_b = @gem_b.data.contents
         keys = (data_a.keys + data_b.keys).sort.uniq
         keys.each do |key|
           if !data_a.key?(key)
@@ -19,8 +19,6 @@ module Giff
             STDERR.puts "#{key} was added"
           elsif data_a[key] != data_b[key]
             STDERR.puts "#{key} was modified"
-          else
-            STDERR.puts "#{key} was unchanged"
           end
         end
       elsif metadata_changed?
