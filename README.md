@@ -2,6 +2,8 @@
 
 <b>G</b>em d<b>IFF</b>
 
+It's pronounced "gif". ™
+
 Show the differences between two `.gem` files!
 
 ## Installation
