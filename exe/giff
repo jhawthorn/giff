@@ -2,5 +2,12 @@
 
 require "giff"
 
-diff = Giff::Diff.new(ARGV.fetch(0), ARGV.fetch(1))
+begin
+  require "open-uri"
+rescue LoadError
+end
+
+file_a = open(ARGV.fetch(0))
+file_b = open(ARGV.fetch(1))
+diff = Giff::Diff.new(file_a, file_b)
 diff.describe
