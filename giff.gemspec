@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["John Hawthorn"]
   spec.email         = ["john@hawthorn.email"]
 
-  spec.summary       = %q{Gem fIFF tool}
+  spec.summary       = %q{Gem dIFF tool}
   spec.description   = %q{Show the changes between two .gem files}
   spec.homepage      = "https://github.com/jhawthorn/giff"
 
