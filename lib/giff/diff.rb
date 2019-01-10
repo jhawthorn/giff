@@ -2,9 +2,10 @@ require "giff/gem_file"
 
 module Giff
   class Diff
-    def initialize(file_a, file_b)
+    def initialize(file_a, file_b, verbose: false)
       @gem_a = to_file(file_a)
       @gem_b = to_file(file_b)
+      @verbose = false
     end
 
     def describe
@@ -19,10 +20,12 @@ module Giff
             STDERR.puts "#{key} was added"
           elsif data_a[key] != data_b[key]
             STDERR.puts "#{key} was modified"
+            STDERR.puts Giff.diff(data_a[key], data_b[key]) if @verbose
           end
         end
       elsif metadata_changed?
         STDERR.puts "files equal but metadata changed"
+        STDERR.puts Giff.diff(@gem_a.metadata, @gem_b.metadata) if @verbose
       else
         STDERR.puts "files and metadata equal"
       end
