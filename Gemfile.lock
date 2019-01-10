@@ -1,0 +1,24 @@
+PATH
+  remote: .
+  specs:
+    giff (0.1.0)
+      minitar
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitar (0.8)
+    minitest (5.11.3)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  giff!
+  minitest
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.16.4

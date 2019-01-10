@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "giff"
+
+diff = Giff::Diff.new(ARGV.fetch(0), ARGV.fetch(1))
+diff.describe
